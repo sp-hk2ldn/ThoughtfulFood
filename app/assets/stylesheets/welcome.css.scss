@@ -1,6 +1,33 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
-	font-face:Pacifico;
+body {
+	background-color:#67809F;
+}
+
+
+h1, h3 {
+	font-family:Pacifico;
+	color:#22313F !important;
+}
+
+p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align:center;
+}
+
+.foodpics {
+	fixed-height:200px;
+	width:200px;
+}
+
+.foodpics > img {
+	
+	max-height:100%;
+	max-width:100%;
+	border:1px solid black;
+}
+
+.foodheader {
+	padding-bottom:0px;
 }

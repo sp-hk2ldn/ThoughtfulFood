@@ -64,20 +64,26 @@ Enjoy what really matters in life.<br> </p>
      <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h2>Dish 1</h2>
-          
-          <p><%= @item.name %>
-          <!-- <p><img src="/assets/<%=@item.photo_path%>"> -->
-          <%= image_tag @item.photo_path %>
+        	<div class="foodheader">
+          		<h3><%= @item1.name %><br><br></h3>
+        	</div>
+          <div class ="foodpics">
+          <% if false %> <p><img src="/assets/<%=@item.photo_path%>"> </p><% end %>
+          	<%= image_tag @item1.photo_path %> 
+          </div>
         </div>
         <div class="col-md-4">
-        <h2>Dish 2</h2>
-        <p></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Dish 3</h2>
-          <p></p>
+        	<div class="foodheader">
+       			<h3><%= @item2.name %><br><br></h3>
         </div>
+        <div class ="foodpics"><%= image_tag @item2.photo_path %> </div>
+       		</div>
+        <div class="col-md-4">
+	    	<div class="foodheader">
+	          	<h3><%= @item3.name %><br><br></h3>
+	        </div>
+	          <div class ="foodpics"><%= image_tag @item3.photo_path %> </div>
+	        </div>
       </div> 
   </body>
 </html>
