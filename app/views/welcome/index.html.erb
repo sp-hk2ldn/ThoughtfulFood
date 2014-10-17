@@ -61,29 +61,18 @@ Enjoy what really matters in life.<br> </p>
 
       
     </div>
-     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-        	<div class="foodheader">
-          		<h3><%= @item1.name %><br><br></h3></a>
-        	</div>
-          <div class ="foodpics">
-          	<%= image_tag @item1.photo_path %>
-          </div>
-        </div>
-        <div class="col-md-4">
-        	<div class="foodheader">
-       			<h3><%= @item2.name %><br><br></h3>
-        </div>
-          <div class ="foodpics"><%= image_tag @item2.photo_path %> </div>
-       		</div>
-        <div class="col-md-4">
-	    	<div class="foodheader">
-	          	<h3><%= @item3.name %><br><br></h3>
-	        </div>
-	       <div class ="foodpics"><%= image_tag @item3.photo_path %> </div>
-	        </div>
-      </div> 
+    <div class="row">
+        <% [@western_item, @asian_item, @adventurous_item].each do |item| %>
+            <div class="col-md-4">
+                <strong>Try this <span class="cuisine-name"><%= item.cuisine %></span> 
+                item:<span class="item-name"><%= item.name %></span></strong>
+                <p>It comes from <strong><%= item.restaurant_name %></strong> at the smokin' hot price of <%= item.price %></p>
+                <p>Harry gives it a <%= item.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %></p>
+                <p><%= image_tag item.photo_path %></p>
+            </div>
+        <% end %>
+    </div>
+
 
   </body>
 </html>

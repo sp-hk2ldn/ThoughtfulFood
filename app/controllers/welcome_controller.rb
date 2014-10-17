@@ -1,9 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-  	@item = FoodItem.all
-  	@item1 = FoodItem.where(cuisine: "Western").sample
-  	@item2 = FoodItem.where(cuisine: "Adventurous").sample
-  	@item3 = FoodItem.where(cuisine: "Asian").sample
+  	@western_item = FoodItem.where(cuisine: "Western").sample
+    @asian_item = FoodItem.where(cuisine: "Asian").sample
+    @adventurous_item = FoodItem.where(cuisine: "Adventurous").sample       
  	@delivery = Time.now + (2700)		
 		if params[:admin] == "true"
 			render 'index'
