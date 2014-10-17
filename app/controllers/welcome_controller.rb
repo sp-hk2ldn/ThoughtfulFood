@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-  	# @items = FoodItem.all
+  	@item = FoodItem.find_by_name("Crab Yellow Curry")
  	@delivery = Time.now + (2700)		
 		if params[:admin] == "true"
 			render 'index'

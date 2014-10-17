@@ -10,17 +10,12 @@
 
     <title>Jumbotron Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
 
 
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -55,7 +50,6 @@ Enjoy what really matters in life.<br> </p>
           <p><a class="btn btn-default" href="#" role="button">Explore Now &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
        </div>
         <div class="col-md-4">
           <h2>Our Guarantee To You</h2>
@@ -65,18 +59,25 @@ Enjoy what really matters in life.<br> </p>
 
       <hr>
 
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+      
+    </div>
+     <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Dish 1</h2>
+          
+          <p><%= @item.name %>
+          <!-- <p><img src="/assets/<%=@item.photo_path%>"> -->
+          <%= image_tag @item.photo_path %>
+        </div>
+        <div class="col-md-4">
+        <h2>Dish 2</h2>
+        <p></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Dish 3</h2>
+          <p></p>
+        </div>
+      </div> 
   </body>
 </html>
