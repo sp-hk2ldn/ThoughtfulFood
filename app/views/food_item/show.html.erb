@@ -1,2 +1,4 @@
-<h1>FoodItem#show</h1>
-<p>Find me in app/views/food_item/show.html.erb</p>
+<h1><%=@food_item.name %></h1>
+<h2>Freshly Cooked <%=@food_item.cuisine%> cuisine by <%=@food_item.restaurant_name %>
+<div><%= image_tag @food_item.photo_path %></div>
+
